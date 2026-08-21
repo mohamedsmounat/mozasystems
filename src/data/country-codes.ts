@@ -1,0 +1,57 @@
+export type CountryCode = {
+  name: string;
+  iso2: string;
+  dial: string;
+};
+
+export const countryCodes: CountryCode[] = [
+  { name: "Belgium", iso2: "BE", dial: "+32" },
+  { name: "Netherlands", iso2: "NL", dial: "+31" },
+  { name: "France", iso2: "FR", dial: "+33" },
+  { name: "Germany", iso2: "DE", dial: "+49" },
+  { name: "United Kingdom", iso2: "GB", dial: "+44" },
+  { name: "Ireland", iso2: "IE", dial: "+353" },
+  { name: "Luxembourg", iso2: "LU", dial: "+352" },
+  { name: "Switzerland", iso2: "CH", dial: "+41" },
+  { name: "Austria", iso2: "AT", dial: "+43" },
+  { name: "Spain", iso2: "ES", dial: "+34" },
+  { name: "Portugal", iso2: "PT", dial: "+351" },
+  { name: "Italy", iso2: "IT", dial: "+39" },
+  { name: "Denmark", iso2: "DK", dial: "+45" },
+  { name: "Sweden", iso2: "SE", dial: "+46" },
+  { name: "Norway", iso2: "NO", dial: "+47" },
+  { name: "Finland", iso2: "FI", dial: "+358" },
+  { name: "Iceland", iso2: "IS", dial: "+354" },
+  { name: "Poland", iso2: "PL", dial: "+48" },
+  { name: "Czechia", iso2: "CZ", dial: "+420" },
+  { name: "Slovakia", iso2: "SK", dial: "+421" },
+  { name: "Hungary", iso2: "HU", dial: "+36" },
+  { name: "Romania", iso2: "RO", dial: "+40" },
+  { name: "Bulgaria", iso2: "BG", dial: "+359" },
+  { name: "Greece", iso2: "GR", dial: "+30" },
+  { name: "Croatia", iso2: "HR", dial: "+385" },
+  { name: "Slovenia", iso2: "SI", dial: "+386" },
+  { name: "Estonia", iso2: "EE", dial: "+372" },
+  { name: "Latvia", iso2: "LV", dial: "+371" },
+  { name: "Lithuania", iso2: "LT", dial: "+370" },
+  { name: "Malta", iso2: "MT", dial: "+356" },
+  { name: "Cyprus", iso2: "CY", dial: "+357" },
+  { name: "United States", iso2: "US", dial: "+1" },
+  { name: "Canada", iso2: "CA", dial: "+1" },
+  { name: "Australia", iso2: "AU", dial: "+61" },
+  { name: "New Zealand", iso2: "NZ", dial: "+64" },
+  { name: "United Arab Emirates", iso2: "AE", dial: "+971" },
+  { name: "Saudi Arabia", iso2: "SA", dial: "+966" },
+  { name: "Qatar", iso2: "QA", dial: "+974" },
+  { name: "Morocco", iso2: "MA", dial: "+212" },
+  { name: "South Africa", iso2: "ZA", dial: "+27" },
+  { name: "India", iso2: "IN", dial: "+91" },
+  { name: "Singapore", iso2: "SG", dial: "+65" },
+  { name: "Japan", iso2: "JP", dial: "+81" },
+  { name: "China", iso2: "CN", dial: "+86" },
+  { name: "Brazil", iso2: "BR", dial: "+55" },
+  { name: "Mexico", iso2: "MX", dial: "+52" },
+  { name: "Turkey", iso2: "TR", dial: "+90" },
+];
+
+export const defaultCountryCode = "+32";
