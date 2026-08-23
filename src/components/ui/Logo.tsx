@@ -41,7 +41,10 @@ export function HeaderLogo({ tone = "navy" }: { tone?: "navy" | "white" }) {
       aria-label="Moza Systems — home"
       className="inline-flex items-center py-1 focus-visible:outline-2 focus-visible:outline-offset-4"
     >
-      <Wordmark tone={tone} height={20} priority />
+      {/* Base intrinsic size set to the largest rendered size (desktop) to
+          avoid upscaling blur; className scales it down on mobile via h-*
+          with w-auto so the aspect ratio still comes from the real image. */}
+      <Wordmark tone={tone} height={28} priority className="h-6 w-auto md:h-7" />
     </Link>
   );
 }

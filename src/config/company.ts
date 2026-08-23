@@ -18,7 +18,7 @@ export const company = {
   url: "https://mozasystems.com",
 
   contact: {
-    email: "mohamed@mozasystems.com",
+    email: "hello@mozasystems.com",
     // No public phone number has been provided yet. Do not add one.
     phone: null as string | null,
   },

@@ -3,6 +3,7 @@
 import { quoteFormSchema, type QuoteFormFieldErrors } from "@/lib/validation";
 import { sendQuoteEmail } from "@/lib/email";
 import type { QuoteFormState } from "@/lib/quote-form-state";
+import { company } from "@/config/company";
 
 export async function submitQuote(
   _prevState: QuoteFormState,
@@ -59,7 +60,7 @@ export async function submitQuote(
     return {
       status: "error",
       message:
-        "Something went wrong sending your request. Please try again, or email mohamed@mozasystems.com directly.",
+        `Something went wrong sending your request. Please try again, or email ${company.contact.email} directly.`,
       fieldErrors: {},
       values: raw,
     };

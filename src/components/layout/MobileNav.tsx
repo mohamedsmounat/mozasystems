@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { mainNav, primaryCta } from "@/data/nav";
 import { cn } from "@/lib/utils";
+import { company } from "@/config/company";
 import { useEffect } from "react";
 
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -69,8 +70,8 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
           >
             {primaryCta.label}
           </Link>
-          <a href="mailto:mohamed@mozasystems.com" className="text-center text-[13px] text-muted">
-            mohamed@mozasystems.com
+          <a href={`mailto:${company.contact.email}`} className="text-center text-[13px] text-muted">
+            {company.contact.email}
           </a>
         </div>
       </nav>

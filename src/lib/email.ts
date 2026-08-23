@@ -6,7 +6,7 @@ import type { QuoteFormValues } from "@/lib/validation";
  *
  * Required environment variables:
  * - RESEND_API_KEY: your Resend API key.
- * - QUOTE_TO_EMAIL: inbox that should receive quote requests (mohamed@mozasystems.com).
+ * - QUOTE_TO_EMAIL: inbox that should receive quote requests (hello@mozasystems.com).
  *
  * Optional:
  * - RESEND_FROM_EMAIL: verified sending address on your Resend domain
@@ -64,7 +64,7 @@ export async function sendQuoteEmail(values: QuoteFormValues) {
     </div>
   `;
 
-  return resend.emails.send({
+  const result = await resend.emails.send({
     from: fromEmail,
     to: toEmail,
     replyTo: values.email,
@@ -72,6 +72,16 @@ export async function sendQuoteEmail(values: QuoteFormValues) {
     text: textBody,
     html: htmlBody,
   });
+
+  // The Resend SDK does not throw on API-level errors (bad domain, rate
+  // limit, sandbox restrictions, etc.) — it resolves with { error } instead.
+  // Without this check, a failed send would still report "success" to the
+  // visitor while the email silently never arrived.
+  if (result.error) {
+    throw new Error(`Resend API error: ${result.error.message}`);
+  }
+
+  return result;
 }
 
 function escapeHtml(input: string): string {
