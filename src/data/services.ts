@@ -10,6 +10,13 @@ export type Capability = {
   included: string[];
   process: { step: string; detail: string }[];
   note?: string;
+  /**
+   * The "a/an <name>" phrase used in "How {processPhrase} project runs."
+   * Only needed when lowercasing shortName reads wrong (e.g. "AI systems"
+   * needs "an AI systems", not "a ai systems"). Defaults to
+   * `a ${shortName.toLowerCase()}` when omitted.
+   */
+  processPhrase?: string;
 };
 
 export const capabilities: Capability[] = [
@@ -112,6 +119,7 @@ export const capabilities: Capability[] = [
       { step: "Hand over", detail: "We test it against real cases and hand it over with a clear explanation." },
     ],
     note: "Some workflows are better left to a person. We recommend automation where it saves real time, not everywhere it's technically possible.",
+    processPhrase: "an AI systems",
   },
 ];
 

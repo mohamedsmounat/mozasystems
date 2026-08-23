@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         <h1 className="mt-5 text-[34px] font-medium tracking-[-0.01em] text-ink md:text-[42px]">
           Privacy policy
         </h1>
-        <p className="mt-4 text-[13.5px] text-muted">Last updated: draft, not yet finalised.</p>
+        <p className="mt-4 text-[13.5px] text-muted">Last updated: August 23, 2026.</p>
 
         <div className="prose-legal mt-12 max-w-[68ch] space-y-8 text-[15.5px] leading-relaxed text-ink/85">
           <div>

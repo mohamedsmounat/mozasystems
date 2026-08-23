@@ -60,7 +60,7 @@ export function CapabilityPage({ capability }: { capability: Capability }) {
         <Container>
           <SectionLabel>Process</SectionLabel>
           <h2 className="mt-4 max-w-[22ch] text-[26px] font-medium leading-[1.25] text-ink md:text-[30px]">
-            How a {capability.shortName.toLowerCase()} project runs.
+            How {capability.processPhrase ?? `a ${capability.shortName.toLowerCase()}`} project runs.
           </h2>
 
           <ol className="mt-12 flex flex-col divide-y divide-line border-t border-line md:mt-14">
