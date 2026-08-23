@@ -44,7 +44,7 @@ export function HeaderLogo({ tone = "navy" }: { tone?: "navy" | "white" }) {
       {/* Base intrinsic size set to the largest rendered size (desktop) to
           avoid upscaling blur; className scales it down on mobile via h-*
           with w-auto so the aspect ratio still comes from the real image. */}
-      <Wordmark tone={tone} height={28} priority className="h-6 w-auto md:h-7" />
+      <Wordmark tone={tone} height={44} priority className="h-9 w-auto md:h-11" />
     </Link>
   );
 }

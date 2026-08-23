@@ -23,7 +23,7 @@ export function Footer() {
       <Container className="py-16 md:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Wordmark tone="silver" height={26} className="h-6 w-auto" />
+            <Wordmark tone="silver" height={40} className="h-9 w-auto" />
             <p className="mt-5 max-w-[26ch] text-[13.5px] leading-relaxed text-muted-on-dark">
               Creator marketing · Websites · AI systems
             </p>
